@@ -46,9 +46,9 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-500 mb-4 md:mb-0">© 2024 Management Crew. All rights reserved.</p>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition">Kebijakan Privasi</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Syarat & Ketentuan</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Cookies</a>
+                    <a href="{{ route('kebijakan-privasi') }}" class="text-gray-400 hover:text-white transition">Kebijakan Privasi</a>
+                    <a href="{{ route('syarat-ketentuan') }}" class="text-gray-400 hover:text-white transition">Syarat & Ketentuan</a>
+                    <a href="{{ route('cookies') }}" class="text-gray-400 hover:text-white transition">Cookies</a>
                 </div>
             </div>
         </div>

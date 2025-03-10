@@ -40,26 +40,7 @@
 </head>
 
 <body class="antialiased">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/80 backdrop-blur-sm border-b border-gray-800">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-white">MC</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    @auth
-                    <a href="{{ url('/dashboard') }}" class="text-gray-300 hover:text-white transition">Dashboard</a>
-                    @else
-                    <a href="{{ route('login') }}" class="text-gray-300 hover:text-white transition">Log in</a>
-                    @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">Register</a>
-                    @endif
-                    @endauth
-                </div>
-            </div>
-        </div>
-    </nav>
+    @include('layouts.navigation')
 
     <!-- Hero Section -->
     <div class="pt-24 bg-[#1a1a1a]">

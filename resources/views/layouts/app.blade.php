@@ -13,9 +13,10 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @stack('scripts')
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen bg-[#0f1117]">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -32,5 +33,8 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <!-- Scripts at the bottom of the body -->
+        @stack('scripts-body')
     </body>
 </html>

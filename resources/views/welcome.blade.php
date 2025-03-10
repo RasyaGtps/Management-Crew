@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Management Crew</title>
-    <link rel="preconnect" href="https://fonts.bunny.net">
+        <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=poppins:400,500,600,700" rel="stylesheet" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
-    <style>
+            <style>
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #1a1a1a;
@@ -303,33 +303,13 @@
                 font-size: 8px;
             }
         }
-    </style>
-</head>
+            </style>
+    </head>
 
 <body class="antialiased">
     <div class="relative min-h-screen bg-[#1a1a1a]">
         <!-- Navigation -->
-        @if (Route::has('login'))
-        <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/80 backdrop-blur-sm border-b border-gray-800">
-            <div class="container mx-auto px-6 py-4">
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center">
-                        <span class="text-2xl font-bold text-white">MC</span>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        @auth
-                        <a href="{{ url('/dashboard') }}" class="text-gray-300 hover:text-white transition">Dashboard</a>
-                        @else
-                        <a href="{{ route('login') }}" class="text-gray-300 hover:text-white transition">Log in</a>
-                        @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">Register</a>
-                        @endif
-                        @endauth
-                    </div>
-                </div>
-            </div>
-        </nav>
-        @endif
+        @include('layouts.navigation')
 
         <!-- Hero Section with Animation -->
         <div class="relative pt-24">
@@ -589,16 +569,16 @@
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-blue-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
+                                    </svg>
                                 Laporan produktivitas
-                            </li>
+                        </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-blue-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
+                                    </svg>
                                 Integrasi kalender
-                            </li>
-                        </ul>
+                        </li>
+                    </ul>
                     </div>
 
                     <!-- Analytics -->
@@ -629,8 +609,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                                 Laporan kustom
-                            </li>
-                        </ul>
+                        </li>
+                    </ul>
                     </div>
                 </div>
             </div>
@@ -757,7 +737,7 @@
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
+                    </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 transition">Manajemen Tim</h3>
                         <p class="text-gray-400 group-hover:text-gray-300 transition">Kelola tim Anda dengan mudah dan efisien. Atur jadwal, tugas, dan kolaborasi dalam satu platform.</p>
@@ -768,7 +748,7 @@
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                            </svg>
+                    </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 transition">Tracking Tugas</h3>
                         <p class="text-gray-400 group-hover:text-gray-300 transition">Pantau progress tugas secara real-time. Dapatkan laporan dan analisis kinerja tim Anda.</p>
@@ -779,7 +759,7 @@
                         <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                            </svg>
+                    </svg>
                         </div>
                         <h3 class="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 transition">Penjadwalan</h3>
                         <p class="text-gray-400 group-hover:text-gray-300 transition">Buat dan kelola jadwal dengan mudah. Sinkronisasi otomatis dengan kalender tim Anda.</p>
@@ -967,6 +947,6 @@
             });
         });
     </script>
-</body>
+    </body>
 
 </html>

@@ -49,4 +49,16 @@ Route::get('/press', function () {
     return view('press');
 })->name('press');
 
+Route::get('/kebijakan-privasi', function () {
+    return view('kebijakan-privasi');
+})->name('kebijakan-privasi');
+
+Route::get('/syarat-ketentuan', function () {
+    return view('syarat-ketentuan');
+})->name('syarat-ketentuan');
+
+Route::get('/cookies', function () {
+    return view('cookies');
+})->name('cookies');
+
 require __DIR__.'/auth.php';
