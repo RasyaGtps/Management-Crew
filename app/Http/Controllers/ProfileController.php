@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 
 class ProfileController extends Controller
 {
@@ -19,16 +20,21 @@ class ProfileController extends Controller
 
     public function store(Request $request)
     {
+        $user = Auth::user();
+        
         $request->validate([
-            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . Auth::id(),
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+            'avatar' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
         ]);
 
-        $user = Auth::user();
+        // Update name and email
+        $user->name = $request->name;
+        $user->email = $request->email;
 
+        // Handle avatar upload if provided
         if ($request->hasFile('avatar')) {
-            // Hapus avatar lama jika ada
+            // Delete old avatar if exists
             if ($user->avatar) {
                 Storage::disk('public')->delete('avatars/' . $user->avatar);
             }
@@ -38,8 +44,6 @@ class ProfileController extends Controller
             $user->avatar = $avatarName;
         }
 
-        $user->name = $request->name;
-        $user->email = $request->email;
         $user->save();
 
         return back()->with('success', 'Profil berhasil diperbarui.');
