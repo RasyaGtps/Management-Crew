@@ -39,7 +39,15 @@ Management Crew adalah platform manajemen tim modern yang dirancang untuk memban
 - **Authentication:** Laravel Breeze
 - **Icons:** Heroicons
 
-## 📦 Instalasi
+## 📚 Dokumentasi
+
+Dokumentasi lengkap tersedia di folder [`docs/`](docs/):
+
+- [🚀 Panduan Memulai](docs/getting-started.md)
+- [📡 Referensi API](docs/api-reference.md)
+- [🗄️ Skema Database](docs/database-schema.md)
+
+## 📦 Instalasi Cepat
 
 1. **Clone Repository**
    ```bash
@@ -83,39 +91,6 @@ Management Crew adalah platform manajemen tim modern yang dirancang untuk memban
    php artisan serve
    ```
 
-## 📚 Dokumentasi
-
-Dokumentasi lengkap tersedia di [docs.managementcrew.com](https://docs.managementcrew.com)
-
-### Struktur Proyek
-
-```
-management-crew/
-├── app/
-│   ├── Http/
-│   ├── Models/
-│   └── ...
-├── resources/
-│   ├── css/
-│   ├── js/
-│   └── views/
-├── routes/
-│   └── web.php
-└── ...
-```
-
-### Halaman Utama
-
-- **Welcome** - Landing page utama
-- **Features** - Daftar fitur lengkap
-- **Pricing** - Paket dan harga
-- **Tutorial** - Panduan penggunaan
-- **Updates** - Pembaruan dan changelog
-- **About** - Tentang perusahaan
-- **Career** - Lowongan kerja
-- **Blog** - Artikel dan berita
-- **Press Kit** - Sumber daya media
-
 ## 🤝 Kontribusi
 
 Kami sangat menghargai kontribusi dari komunitas! Jika Anda ingin berkontribusi:
@@ -128,11 +103,10 @@ Kami sangat menghargai kontribusi dari komunitas! Jika Anda ingin berkontribusi:
 
 ## 📝 Lisensi
 
-Dilindungi di bawah lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanjut.
+Dilindungi di bawah lisensi MIT. Lihat [`LICENSE`](LICENSE) untuk informasi lebih lanjut.
 
 ## 📞 Kontak
 
-- Website: [managementcrew.com](https://managementcrew.com)
 - Email: contact@mc.com
 - Phone: +62 123 4567 890
 
