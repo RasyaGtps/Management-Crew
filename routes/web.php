@@ -1,0 +1,52 @@
+<?php
+
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::get('/fitur', function () {
+    return view('fitur');
+})->name('fitur');
+
+Route::get('/harga', function () {
+    return view('harga');
+})->name('harga');
+
+Route::get('/tutorial', function () {
+    return view('tutorial');
+})->name('tutorial');
+
+Route::get('/updates', function () {
+    return view('updates');
+})->name('updates');
+
+Route::get('/tentang', function () {
+    return view('tentang');
+})->name('tentang');
+
+Route::get('/karir', function () {
+    return view('karir');
+})->name('karir');
+
+Route::get('/blog', function () {
+    return view('blog');
+})->name('blog');
+
+Route::get('/press', function () {
+    return view('press');
+})->name('press');
+
+require __DIR__.'/auth.php';
