@@ -28,6 +28,14 @@
         .team-card:hover {
             transform: translateY(-5px);
         }
+
+        .achievement-card {
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 
@@ -48,17 +56,49 @@
         </div>
     </div>
 
-    <!-- Story Section -->
+    <!-- Story Section with Stats -->
     <div class="py-20 bg-[#1f1f1f]">
         <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold text-white mb-8">Cerita Kami</h2>
-                <p class="text-gray-400 mb-8 leading-relaxed">
-                    Management Crew didirikan pada tahun 2023 dengan visi untuk memudahkan tim dan organisasi dalam mengelola pekerjaan mereka. Kami percaya bahwa setiap tim memiliki potensi untuk mencapai hasil luar biasa dengan alat yang tepat.
-                </p>
-                <p class="text-gray-400 leading-relaxed">
-                    Sejak awal, kami telah membantu ribuan tim meningkatkan produktivitas dan kolaborasi mereka. Kami terus berinovasi dan mengembangkan platform kami berdasarkan masukan dari pengguna setia kami.
-                </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">Perjalanan Kami</h2>
+                    <div class="space-y-6 text-gray-400">
+                        <p class="leading-relaxed">
+                            Management Crew lahir dari visi untuk merevolusi cara tim bekerja sama. Didirikan pada tahun 2023, kami memulai dengan misi sederhana: membuat manajemen tim lebih efisien dan menyenangkan.
+                        </p>
+                        <p class="leading-relaxed">
+                            Dalam perjalanan kami, kami telah belajar bahwa kesuksesan tim tidak hanya tentang alat yang tepat, tetapi juga tentang membangun budaya kolaborasi yang kuat.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 mt-8">
+                            <div class="bg-[#2a2a2a] p-6 rounded-lg achievement-card">
+                                <div class="text-3xl font-bold text-blue-500 mb-2">10K+</div>
+                                <div class="text-gray-300">Tim Aktif</div>
+                            </div>
+                            <div class="bg-[#2a2a2a] p-6 rounded-lg achievement-card">
+                                <div class="text-3xl font-bold text-blue-500 mb-2">95%</div>
+                                <div class="text-gray-300">Tingkat Kepuasan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="bg-[#2a2a2a] p-4 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Team Collaboration" class="rounded-lg w-full h-40 object-cover">
+                        </div>
+                        <div class="bg-[#2a2a2a] p-4 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Office Culture" class="rounded-lg w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 mt-8">
+                        <div class="bg-[#2a2a2a] p-4 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4" alt="Team Meeting" class="rounded-lg w-full h-48 object-cover">
+                        </div>
+                        <div class="bg-[#2a2a2a] p-4 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1552581234-26160f608093" alt="Work Environment" class="rounded-lg w-full h-40 object-cover">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -114,8 +154,43 @@
         </div>
     </div>
 
-    <!-- Team Section -->
+    <!-- Timeline Section -->
     <div class="py-20 bg-[#1f1f1f]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Perjalanan Kami</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Timeline Item 1 -->
+                    <div class="bg-[#2a2a2a] p-6 rounded-lg">
+                        <div class="text-blue-500 font-semibold mb-2">2023 Q1</div>
+                        <h3 class="text-white font-bold mb-2">Awal Mula</h3>
+                        <p class="text-gray-400">Management Crew didirikan dengan visi mengubah cara tim berkolaborasi.</p>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="bg-[#2a2a2a] p-6 rounded-lg md:mt-12">
+                        <div class="text-blue-500 font-semibold mb-2">2023 Q2</div>
+                        <h3 class="text-white font-bold mb-2">Peluncuran Beta</h3>
+                        <p class="text-gray-400">Versi beta diluncurkan dengan fitur-fitur dasar manajemen tim.</p>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="bg-[#2a2a2a] p-6 rounded-lg">
+                        <div class="text-blue-500 font-semibold mb-2">2023 Q3</div>
+                        <h3 class="text-white font-bold mb-2">Ekspansi Tim</h3>
+                        <p class="text-gray-400">Tim berkembang dan mencapai 1000+ pengguna aktif pertama.</p>
+                    </div>
+                    <!-- Timeline Item 4 -->
+                    <div class="bg-[#2a2a2a] p-6 rounded-lg md:mt-12">
+                        <div class="text-blue-500 font-semibold mb-2">2023 Q4</div>
+                        <h3 class="text-white font-bold mb-2">Inovasi Baru</h3>
+                        <p class="text-gray-400">Peluncuran fitur-fitur baru dan peningkatan performa platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="py-20 bg-[#1a1a1a]">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-white mb-12">Tim Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -125,6 +200,18 @@
                     <h3 class="text-xl font-semibold text-white text-center mb-2">Ahmad Rizki</h3>
                     <p class="text-blue-500 text-center mb-4">CEO & Founder</p>
                     <p class="text-gray-400 text-center">Memimpin visi dan strategi Management Crew sejak awal.</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Team Member 2 -->
@@ -133,6 +220,18 @@
                     <h3 class="text-xl font-semibold text-white text-center mb-2">Sarah Diana</h3>
                     <p class="text-blue-500 text-center mb-4">CTO</p>
                     <p class="text-gray-400 text-center">Mengawasi pengembangan teknologi dan inovasi produk.</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Team Member 3 -->
@@ -141,13 +240,25 @@
                     <h3 class="text-xl font-semibold text-white text-center mb-2">Rudi Hartono</h3>
                     <p class="text-blue-500 text-center mb-4">COO</p>
                     <p class="text-gray-400 text-center">Mengelola operasional dan pertumbuhan bisnis.</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Values Section -->
-    <div class="py-20 bg-[#1a1a1a]">
+    <div class="py-20 bg-[#1f1f1f]">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-white mb-12">Nilai-Nilai Kami</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -193,6 +304,26 @@
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-4">Dampak</h3>
                     <p class="text-gray-400">Membuat perubahan positif bagi pengguna</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="py-20 bg-[#1a1a1a]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-8">Bergabung dengan Kami</h2>
+                <p class="text-gray-400 mb-8">
+                    Kami selalu mencari talenta berbakat yang ingin membuat dampak positif. Lihat posisi yang tersedia atau hubungi kami untuk informasi lebih lanjut.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="{{ route('karir') }}" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors">
+                        Lihat Karir
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-lg transition-colors">
+                        Hubungi Kami
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data="{ yearly: false }">
 
 <head>
     <meta charset="utf-8">
@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=poppins:400,500,600,700" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
         body {
@@ -59,20 +60,28 @@
     <div class="py-20 bg-[#1f1f1f]">
         <div class="container mx-auto px-6">
             <!-- Pricing Toggle -->
-            <div class="flex justify-center items-center space-x-4 mb-16">
+            <div class="flex items-center justify-center mt-8 space-x-4">
                 <span class="text-gray-400">Bayar Bulanan</span>
-                <button class="relative w-16 h-8 rounded-full bg-blue-600 flex items-center transition duration-300 focus:outline-none">
-                    <div class="absolute w-6 h-6 bg-white rounded-full transform translate-x-1 transition duration-300"></div>
+                <button type="button" 
+                        class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        :class="yearly ? 'bg-blue-600' : 'bg-gray-700'"
+                        @click="yearly = !yearly"
+                        role="switch">
+                    <span class="sr-only">Toggle yearly billing</span>
+                    <span class="pointer-events-none relative inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+                          :class="yearly ? 'translate-x-5' : 'translate-x-0'">
+                    </span>
                 </button>
                 <span class="text-gray-400">Bayar Tahunan <span class="text-blue-500">(Hemat 20%)</span></span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
                 <!-- Starter Plan -->
                 <div class="bg-[#2a2a2a] rounded-xl p-8 pricing-card relative border border-gray-800 hover:border-blue-500/50">
                     <h3 class="text-2xl font-bold text-white mb-4">Starter</h3>
                     <div class="flex items-baseline mb-8">
-                        <span class="text-5xl font-bold text-white">Rp299</span>
+                        <span class="text-5xl font-bold text-white">Rp</span>
+                        <span class="text-5xl font-bold text-white" x-text="yearly ? '239.000' : '299.000'"></span>
                         <span class="text-gray-400 ml-2">/ bulan</span>
                     </div>
                     <p class="text-gray-400 mb-8">Perfect untuk tim kecil yang baru memulai</p>
@@ -114,7 +123,8 @@
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">Pro</h3>
                     <div class="flex items-baseline mb-8">
-                        <span class="text-5xl font-bold text-white">Rp799</span>
+                        <span class="text-5xl font-bold text-white">Rp</span>
+                        <span class="text-5xl font-bold text-white" x-text="yearly ? '639.000' : '799.000'"></span>
                         <span class="text-gray-400 ml-2">/ bulan</span>
                     </div>
                     <p class="text-gray-400 mb-8">Untuk tim yang berkembang dengan kebutuhan lebih</p>
@@ -225,15 +235,6 @@
 
     <!-- Footer -->
     <x-footer />
-
-    <script>
-        // Toggle Pricing
-        const toggle = document.querySelector('button');
-        toggle.addEventListener('click', () => {
-            toggle.querySelector('div').classList.toggle('translate-x-9');
-            // Add logic for price switching here
-        });
-    </script>
 </body>
 
 </html> 
